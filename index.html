@@ -16,9 +16,25 @@
 var x = 0;
 var y = 0;
 
-function myFunction()
+function goRight()
 {
 	x++;
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+}
+
+function goLeft()
+{
+	x--;
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+}
+function goDown()
+{
+	y--;
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+}
+function goUp()
+{
+	y++;
 	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
 }
 
