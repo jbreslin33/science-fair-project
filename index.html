@@ -2,9 +2,27 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
+<p>Science Project</p>
 
-<p>My first paragraph.</p>
+<button onclick="goRight()">Right</button>
+<button onclick="goLeft()">Left</button>
+<button onclick="goDown()">Down</button>
+<button onclick="goUp()">Up</button>
+
+<p id="output"></p>
+
+<script>
+
+var x = 0;
+var y = 0;
+
+function myFunction()
+{
+	x++;
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+}
+
+</script>
 
 </body>
 </html>
