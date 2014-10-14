@@ -1,0 +1,3 @@
+
+2014-10-14
+I am thinking of making a choose your own adventure game. The way this would be an experiment would be keeping track of what users picked. Then showing that as a piecchart or bar graph or something else.
