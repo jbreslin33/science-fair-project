@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body>
+
+<DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
 
 <img id="picture_id" src="images/open_wall_wall.jpg" alt="Mountain View" style="width:304px;height:228px">
 <p>Science Project</p>
@@ -61,7 +66,32 @@ function move()
 		y = yLast;
 	}
 	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
-}
+
+
+	if (x == 0 && y == 2)
+	{
+		x = xLast;
+		y = yLast;
+	}
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+	
+
+	if (x == 0 && y == 3) 
+	{
+		x = xLast;
+		y = yLast;
+	}
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
+}        
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
