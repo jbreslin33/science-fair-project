@@ -4,7 +4,6 @@
 
 <img id="picture_id" src="images/open_wall_wall.jpg" alt="Mountain View" style="width:304px;height:228px">
 <p>Science Project</p>
-<p id="clock"></p>
 
 <button onclick="goRight()">Right</button>
 <button onclick="goLeft()">Left</button>
@@ -15,28 +14,6 @@
 
 <script>
 
-var myVar = setInterval(function(){myTimer()}, 1000);
-
-var counter = 0;
-function myTimer()
-{
-	counter++;
-    	document.getElementById("clock").innerHTML = 'counter:' + counter;
-
-	if (x == 0 && y == 0)
-	{
-    		document.getElementById("picture_id").src = "images/wall_wall_wall.jpg";
-	}
-	
-	//wall
-	if (x == 1 && y == 0)
-	{
-		x = xLast;	
-	}
-}
-
-
-var gameOn=true;
 var x = 0;
 var xLast = 0;
 var y = 0;
@@ -46,42 +23,46 @@ function goRight()
 {
 	xLast = x;
 	x++;
-	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
-	showPicture();
+	move();
 }
 
 function goLeft()
 {
 	xLast = x;
 	x--;
-	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
-	showPicture();
+	move();
 } 
 function goDown()
 {
 	xLast = y;
 	y--;
-	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
-	showPicture();
+	move();
 }
 function goUp()
 {
 	xLast = y;
 	y++;
-	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
-	showPicture();
+	move();
 }
 
-function showPicture()
+function move()
 {
-
+	if (x == 0 && y == 0)
+	{
+    		document.getElementById("picture_id").src = "images/wall_wall_open.jpg";
+	}
+	if (x == 1 && y == 0)
+	{
+    		document.getElementById("picture_id").src = "images/open_wall_wall.jpg";
+	}
+	if (x == 0 && y == 1)
+	{
+		x = xLast;
+		y = yLast;
+	}
+	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
 }
 
 </script>
- 
-
-
-
- 
 </body>
 </html>
