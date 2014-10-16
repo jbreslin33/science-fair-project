@@ -2,7 +2,9 @@
 <html>
 <body>
 
+<img src="images/open_wall_wall.jpg" alt="Mountain View" style="width:304px;height:228px">
 <p>Science Project</p>
+<p id="clock"></p>
 
 <button onclick="goRight()">Right</button>
 <button onclick="goLeft()">Left</button>
@@ -13,6 +15,16 @@
 
 <script>
 
+var myVar = setInterval(function(){myTimer()}, 1000);
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = t;
+}
+
+
+var gameOn=true;
 var x = 0;
 var y = 0;
 
@@ -41,13 +53,14 @@ function goUp()
 	document.getElementById("output").innerHTML = 'x:' + x + 'y:' + y;
 	showPicture();
 }
+
 function showPicture()
 {
 
 }
+
 </script>
  
-<img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px">>
 
 
 
